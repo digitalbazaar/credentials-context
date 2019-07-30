@@ -1,6 +1,6 @@
 {
   "name": "credentials-context",
-  "version": "0.0.1-0",
+  "version": "1.0.0",
   "description": "Credentials Context",
   "main": "js",
   "module": "./dist/module.js",
@@ -18,7 +18,7 @@
     "url": "https://github.com/digitalbazaar/credentials-context/issues"
   },
   "homepage": "https://github.com/digitalbazaar/credentials-context#readme",
-  "license": "SEE LICENSE IN LICENSE.md",  
+  "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "eslint": "^6.0.1",
     "eslint-config-digitalbazaar": "^2.0.0",
