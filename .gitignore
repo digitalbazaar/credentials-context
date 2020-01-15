@@ -1,6 +1,7 @@
 *.sw[nop]
 *~
 .DS_Store
+.vscode
 TAGS
 node_modules
 dist
