@@ -1,19 +1,24 @@
+/*!
+ * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
+ */
 'use strict';
 
+const context = require('./context');
 const constants = require('./constants');
-const fs = require('fs');
-const path = require('path');
+const {documentLoader} = require('./documentLoader');
+const {CONTEXT_URL, CBORLD_VALUE} = constants;
 
-exports.constants = constants;
-const contexts = exports.contexts = new Map();
+const contexts = new Map();
+contexts.set(constants.CONTEXT_URL, context);
 
-function _read(_path) {
-  return JSON.parse(
-    fs.readFileSync(
-      path.join(__dirname, _path),
-      {encoding: 'utf8'}));
-}
+const appContextMap = new Map();
+appContextMap.set(CONTEXT_URL, CBORLD_VALUE);
 
-contexts.set(
-  constants.CREDENTIALS_CONTEXT_V1_URL,
-  _read('../contexts/credentials-v1.jsonld'));
+module.exports = {
+  constants,
+  contexts,
+  appContextMap,
+  documentLoader,
+  CONTEXT_URL,
+  CONTEXT: context
+};
