@@ -6,19 +6,17 @@
 const context = require('./context');
 const constants = require('./constants');
 const {documentLoader} = require('./documentLoader');
-const {CONTEXT_URL, CBORLD_VALUE} = constants;
+const {CONTEXT_URL} = constants;
 
 const contexts = new Map();
 contexts.set(constants.CONTEXT_URL, context);
 
-const appContextMap = new Map();
-appContextMap.set(CONTEXT_URL, CBORLD_VALUE);
-
 module.exports = {
   constants,
   contexts,
-  appContextMap,
   documentLoader,
   CONTEXT_URL,
+  CREDENTIALS_CONTEXT_V1_URL: CONTEXT_URL,
+  CONTEXT_URL_V1: CONTEXT_URL,
   CONTEXT: context
 };
