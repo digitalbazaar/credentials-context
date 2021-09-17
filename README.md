@@ -1,10 +1,10 @@
-# DID Context _(credentials-context)_
+# Verifiable Credentials v1 Context _(credentials-context)_
 
 [![NPM Version](https://img.shields.io/npm/v/credentials-context.svg?style=flat-square)](https://npm.im/credentials-context)
 
 > A [Verifiable Credentials v1](https://github.com/w3c/vc-data-model) context library for JavaScript
 
-This project packages the DID Context from the [DID specification][did-spec]
+This project packages the DID Context from the [Verifiable Credentials v1 spec](https://github.com/w3c/vc-data-model)
 for use with [Node.js][Node.js] and web apps.
 
 ## Table of Contents
@@ -86,7 +86,6 @@ Digital Bazaar: support@digitalbazaar.com
 - See the [LICENSE](./LICENSE.md) file for details.
 
 [credentials-context]: https://github.com/digitalbazaar/credentials-context
-[did-spec]: https://www.w3.org/TR/did-core/
 [NPM]: https://www.npmjs.com/
 [Node.js]: https://nodejs.org/
 [webpack]: https://webpack.js.org/
