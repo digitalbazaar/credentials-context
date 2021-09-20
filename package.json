@@ -5,7 +5,6 @@
   "main": "js/index.js",
   "module": "./dist/context.esm.js",
   "files": [
-    "contexts",
     "dist/context.js",
     "dist/context.esm.js",
     "js"
@@ -52,9 +51,10 @@
   },
   "scripts": {
     "build": "npm run clean && webpack && rollup -c",
-    "clean": "rm -rf dist/* && rm -rf contexts/*.jsonld",
+    "clean": "rm -rf dist/*",
     "lint": "eslint js test",
     "prepare": "npm run build",
+    "prepack": "npm run build",
     "test": "npm run lint && npm run build && npm run test-node && npm run test-karma",
     "test-karma": "karma start test/karma.conf.js",
     "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js"
