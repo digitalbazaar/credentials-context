@@ -1,6 +1,6 @@
 # credentials-context ChangeLog
 
-## 2.0.0 - 
+## 2.0.0 - 2019-09-20
 
 ### Changed
 - Refactor to use current context repo template.
