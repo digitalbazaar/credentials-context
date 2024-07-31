@@ -47,9 +47,9 @@ npm install @digitalbazaar/credentials-context
 ## Usage
 
 ```js
-import {contexts, contextsMetadata} from 'credentials-context';
+import {contexts, contextsMetadata} from '@digitalbazaar/credentials-context';
 // or
-const {contexts, contextsMetadata} = require('credentials-context');
+const {contexts, contextsMetadata} = require('@digitalbazaar/credentials-context');
 ```
 
 The `contexts` [Map][] can be used to access individual contexts by id or load
