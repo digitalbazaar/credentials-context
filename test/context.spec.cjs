@@ -1,18 +1,18 @@
 /*!
  * Copyright (c) 2021-2024 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+const chai = require('chai');
 chai.should();
 const {expect} = chai;
 
-import {
+const {
   contexts,
   contextsMetadata
-} from '../lib/index.js';
-import {
+} = require('../dist/main.cjs');
+const {
   tests
-} from './context.common.cjs';
+} = require('./context.common.cjs');
 
-describe('Context (import)', () => {
+describe('Context (require)', () => {
   tests({contexts, contextsMetadata, expect});
 });
