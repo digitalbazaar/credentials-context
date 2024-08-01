@@ -47,9 +47,9 @@ npm install @digitalbazaar/credentials-context
 ## Usage
 
 ```js
-import {contexts, contextsMetadata} from '@digitalbazaar/credentials-context';
+import {contexts, metadata, named} from '@digitalbazaar/credentials-context';
 // or
-const {contexts, contextsMetadata} = require('@digitalbazaar/credentials-context');
+const {contexts, metadata, named} = require('@digitalbazaar/credentials-context');
 ```
 
 The `contexts` [Map][] can be used to access individual contexts by id or load
@@ -63,9 +63,13 @@ applications.
 
 The library exports two properties:
 - `contexts`: A [Map][] associating context URLs to context data.
-- `contextsMetadata`: A [Map][] associating context URLs to context metadata.
+- `metadata`: A [Map][] associating context URLs to context metadata.
+- `named`: A [Map][] associating short package specific names to context
+  metadata.
 
-Note that the `contextsMetadata` format is experimental and subject to change.
+Note that the `metadata` format is experimental and subject to change. The `id`
+field is expected to stay stable and can be used with the `named` Map to get a
+context URL for a short name such as `v2`.
 
 The context files are available in the published `contexts/` directory. The
 metadata has a URL for each context. Note that these files are semantically
@@ -77,9 +81,18 @@ strict file digests are not equivalent.
 The following contexts are available as of mid-2024. They track the published
 spec contexts.
 
-- `https://www.w3.org/2018/credentials/v1`: Stable.
-- `https://www.w3.org/ns/credentials/v2`: Under development.
-- `https://www.w3.org/ns/credentials/undefined-terms/v2`: Under development.
+- Verifiable Credentials v1.1 context
+  - URL: `https://www.w3.org/2018/credentials/v1`
+  - Short name: `v1`
+  - Status: stable
+- Verifiable Credentials v2.0 context
+  - URL: `https://www.w3.org/ns/credentials/v2`
+  - Short name: `v2`
+  - Status: under development
+- Verifiable Credentials v2.0 undefined terms context
+  - URL: `https://www.w3.org/ns/credentials/undefined-terms/v2`
+  - Short name: `undefined-terms-v2`
+  - Status: under development
 
 ## Developing
 

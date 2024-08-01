@@ -2,13 +2,10 @@
 /*!
  * Copyright (c) 2023-2024 Digital Bazaar, Inc. All rights reserved.
  */
-import {contextsMetadata} from '../lib/index.js';
 import fs from 'node:fs';
+import {metadata} from '../lib/index.js';
 
 // Serialize the contexts as JSON-LD
-for(const metadata of contextsMetadata.values()) {
-  fs.writeFileSync(
-    metadata.url,
-    JSON.stringify(metadata.context, null, 2) + '\n'
-  );
+for(const {url, context} of metadata.values()) {
+  fs.writeFileSync(url, JSON.stringify(context, null, 2) + '\n');
 }
