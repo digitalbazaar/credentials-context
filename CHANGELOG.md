@@ -1,5 +1,15 @@
 # @digitalbazaar/credentials-context ChangeLog
 
+## 3.1.0 - 2024-xx-xx
+
+### Added
+- Export experimental `named` Map to associate "short names" to metadata. Can
+  be used to get context URLs from easier to remember names with code like
+  `vcNamed.get('v2').id`.
+
+### Changed
+- Rename experimental export `contextsMetadata` to `metadata`.
+
 ## 3.0.0 - 2024-07-31
 
 ### Added

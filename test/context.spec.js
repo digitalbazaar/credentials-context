@@ -7,12 +7,13 @@ const {expect} = chai;
 
 import {
   contexts,
-  contextsMetadata
+  metadata,
+  named
 } from '../lib/index.js';
 import {
   tests
 } from './context.common.cjs';
 
 describe('Context (import)', () => {
-  tests({contexts, contextsMetadata, expect});
+  tests({contexts, metadata, named, expect});
 });
