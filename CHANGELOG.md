@@ -1,6 +1,6 @@
 # @digitalbazaar/credentials-context ChangeLog
 
-## 3.1.0 - 2024-xx-xx
+## 3.1.0 - 2024-08-01
 
 ### Added
 - Export experimental `named` Map to associate "short names" to metadata. Can
