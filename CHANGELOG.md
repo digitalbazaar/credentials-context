@@ -1,6 +1,6 @@
 # @digitalbazaar/credentials-context ChangeLog
 
-## 3.2.0 - 2025-02-xx
+## 3.2.0 - 2025-02-27
 
 ### Changed
 - Update to latest VC Data Model 2.0 contexts.
