@@ -1,5 +1,14 @@
 # @digitalbazaar/credentials-context ChangeLog
 
+## 3.2.0 - 2025-02-xx
+
+### Changed
+- Update to latest VC Data Model 2.0 contexts.
+  - Align with VC Bitstring Status List spec.
+  - Move `statusMessage`, `statusReference`, and `statusSize` from
+    `BitstringStatusList` to `BitstringStatusListEntry`.
+  - Change `statusSize` data type from `xsd:positiveInteger` to `xsd:integer`.
+
 ## 3.1.0 - 2024-08-01
 
 ### Added
